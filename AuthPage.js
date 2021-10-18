@@ -5,17 +5,18 @@ document.getElementById("cartValue").innerHTML = number;
 var lpTag = {};
 lpTag.identities = [];
 
-lpTag.identities.push(identityFn);
+
 function identityFn(callback) {
     callback({
-        iss: "https://idp.liveperson.net",
+        iss: "https://xsol1827x.github.io/AuthPage.html",
         acr: "loa1",
-        sub: "+13214996910"
+        sub: "13214996910"
     });
 }
+lpTag.identities.push(identityFn);
 
-function authenticate(callback) {
+function LPJsMethodName(callback) {
     console.log("The Authenticated function has been called");
-    const jwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3IiOiJsb2ExIiwic3ViIjoiKzEzMjE0OTk2OTEwIiwiaXNzIjoiaHR0cHM6Ly9pZHAubGl2ZXBlcnNvbi5uZXQiLCJhdWQiOiJhY2M6Mzc2ODQzMDciLCJleHAiOjE2MzQzNDY5NjksImlhdCI6MTYzNDE3NDIzMiwiZ2l2ZW5fbmFtZSI6IkVpdGFuIn0.WAkmN6PqLFlX5oEs0Tuc9VSKXSsAAi4iFj1_eLHWZ4UolVbYmonnuhnjFK6zmQHc121QFQEK5MtVaGsIx7i3NV9l161GG7ONrqxCOObQIGknIUPfwIsbXZ9IS8fMEC9HOxc-raWZCMWItk9Nkb8_THWh4GjhQgaQjfpNnv0tzYKaV41TCXIENk6qS5PTa6E_bnGkAyOqyZZDxgDly8PSz2pvdetgTrYoVGFHNgR9nilCB73D9MiaViYT4bedc9vRPNnHYwqiBDe8nBP8fPSlOoyIAWEEGS1NwFJg1-W4IHCkwYmEiAWGJXGjbiemneEQp72bXAYPugQf4gdux0D8pQ"
+    const jwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3IiOiJsb2ExIiwic3ViIjoiMTMyMTQ5OTY5MTAiLCJpc3MiOiJodHRwczovL3hzb2wxODI3eC5naXRodWIuaW8vQXV0aFBhZ2UuaHRtbCIsImF1ZCI6ImFjYzozNzY4NDMwNyIsImV4cCI6MTYzNDM0Njk2OSwiaWF0IjoxNjM0MTc0MjMyLCJnaXZlbl9uYW1lIjoiRWl0YW4ifQ.LjPqDhlPOqSAqOOjUUgYVwzHnvSjIr_X_YMaK5FV2aMN0pzPHzHcKFOrRlEHrtRmQw15r6BipJa4m6YW2BYWy8bOKCF9v5Zo2WQySvJ7tlZDL1YHPHqI3LhVc9TZBZQ5d9JcGVx3IQ355iwnOc4bXzgaFjc6FH4pDlQdLW-5zPHNWqfAEeBMPbB9wQqQAzGlUNSFo-sszMOhKw0ixLMf2QtSVCOwYH7q8pcPfyMsXwenpohwT41aoRw3cgqgcEUMOA5JlGz4UoBfTtYCFX236GlOSHHh42Op64_UfYp4-e24xPqV0y-p_ObwnMEUejTOT5dGnorArWyx66yMgArr2w"
     callback(jwt)
 }
