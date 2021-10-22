@@ -14,6 +14,25 @@ function identityFn(callback) {
     });
 }
 lpTag.identities.push(identityFn);
+var pageTitle = document.title;
+lpTag.sdes = lpTag.sdes || [];
+//send data using SDEs
+lpTag.sdes.push(
+    {
+        "type": "ctmrinfo", //MANDATORY
+        "info": {
+            "userName": pageTitle
+        }
+    },
+    {
+        "type": "purchase",
+        "total": number //MANDATORY
+    }
+);
+
+//returns the sdes
+lpTag.sdes.get("ctmrinfo", "purchase")
+
 
 function LPJsMethodName(callback) {
     console.log("The Authenticated function has been called");
