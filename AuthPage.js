@@ -27,6 +27,15 @@ lpTag.sdes.push(
     {
         "type": "purchase",
         "total": number //MANDATORY
+    },
+    {
+        "type": "service", //MANDATORY,
+        "service": {
+            "topic": "Batman", //SERVICE ACTIVITY TOPIC OR NAME
+            "status": 0,
+            "category": "movie",
+            "serviceId": "service12"
+        }
     }
 );
 
